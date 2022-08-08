@@ -6,6 +6,7 @@
     "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.Mail.Activities": "[1.15.2]",
     "UiPath.System.Activities": "[22.4.1]",
+    "UiPath.Testing.Activities": "[22.4.3]",
     "UiPath.UIAutomation.Activities": "[22.4.5]"
   },
   "webServices": [],
@@ -39,7 +40,20 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "a914c503-8793-4ed2-aa46-a9e9ec0e1d02",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Browser_Open_Mobile.de.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "3084053b-eab6-4940-8712-a967ea0dfd18",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Mobile_SetMoreFilters.xaml"
+      }
+    ],
     "modernBehavior": false
   },
   "expressionLanguage": "VisualBasic",
