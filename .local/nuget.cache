@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ic2EB1wcrVAe03/NIelS6CFkbUNEAF6L6IIDhVZXQUSMg1PLHuXyhUEg5x77cUinHoySkHKLsUhknaSz2PzGUA==",
+  "dgSpecHash": "prNwE95N8yl0X0GanUWMKmKiAs0fktHJYGdfZE0Dg+C75ffgKy7F+tgANI2zZVOAO++7ceiuB9TFEOPQufUVpg==",
   "success": true,
   "projectFilePath": "C:\\Users\\SamuelEke\\Documents\\UiPath\\GitHub\\fwf-carsOnMobile.de\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\SamuelEke\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\SamuelEke\\.nuget\\packages\\checkprocessstatus.activities\\1.0.1\\checkprocessstatus.activities.1.0.1.nupkg.sha512",
     "C:\\Users\\SamuelEke\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
     "C:\\Users\\SamuelEke\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\Users\\SamuelEke\\.nuget\\packages\\documentformat.openxml\\2.5.0\\documentformat.openxml.2.5.0.nupkg.sha512",

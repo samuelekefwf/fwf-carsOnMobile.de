@@ -34,7 +34,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1129,3305</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1156,3411</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Browser_SetMoreFilters_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
@@ -97,10 +97,9 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Browser_SetMoreFilters" sap:VirtualizedContainerService.HintSize="680,3240" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Browser_SetMoreFilters" sap:VirtualizedContainerService.HintSize="680,3346" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="index" />
-      <Variable x:TypeArguments="x:Int32" Name="numberOfCars" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -108,13 +107,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message - Browser_SetMoreFilters" sap:VirtualizedContainerService.HintSize="638,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Browser_SetMoreFilters start...&quot;]" />
-    <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_browser]" BrowserType="[in_browser.BrowserName]" DisplayName="Attach Browser from argument" sap:VirtualizedContainerService.HintSize="638,3017" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
+    <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_browser]" BrowserType="[in_browser.BrowserName]" DisplayName="Attach Browser from argument" sap:VirtualizedContainerService.HintSize="638,3123" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="604,2909" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Sequence - Filtering" sap:VirtualizedContainerService.HintSize="604,3015" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="indexFromCarType" />
             </Sequence.Variables>
@@ -145,13 +144,13 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[index]" DisplayName="For Each Car" sap:VirtualizedContainerService.HintSize="562,981" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[in_carBrands.split(&quot;;&quot;c)]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[index]" DisplayName="For Each Car" sap:VirtualizedContainerService.HintSize="562,1087" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[in_carBrands.split(&quot;;&quot;c)]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="car" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,858" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,964" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="addOtherButton" />
                     </Sequence.Variables>
@@ -172,69 +171,40 @@
                         </ui:Target>
                       </ui:SelectItem.Target>
                     </ui:SelectItem>
-                    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item - Model" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="[car.split(&quot;,&quot;c)(1).toString]">
-                      <ui:SelectItem.Items>
-                        <scg:List x:TypeArguments="x:String" Capacity="50">
-                          <x:String>Any</x:String>
-                          <x:String>100</x:String>
-                          <x:String>200</x:String>
-                          <x:String>80</x:String>
-                          <x:String>90</x:String>
-                          <x:String>A1</x:String>
-                          <x:String>A2</x:String>
-                          <x:String>A3</x:String>
-                          <x:String>A4</x:String>
-                          <x:String>A4 Allroad</x:String>
-                          <x:String>A5</x:String>
-                          <x:String>A6</x:String>
-                          <x:String>A6 Allroad</x:String>
-                          <x:String>A7</x:String>
-                          <x:String>A8</x:String>
-                          <x:String>Cabriolet</x:String>
-                          <x:String>Coupé</x:String>
-                          <x:String>e-tron</x:String>
-                          <x:String>Q1</x:String>
-                          <x:String>Q2</x:String>
-                          <x:String>Q3</x:String>
-                          <x:String>Q4</x:String>
-                          <x:String>Q5</x:String>
-                          <x:String>Q7</x:String>
-                          <x:String>Q8</x:String>
-                          <x:String>quattro</x:String>
-                          <x:String>R8</x:String>
-                          <x:String>RS2</x:String>
-                          <x:String>RS3</x:String>
-                          <x:String>RS4</x:String>
-                          <x:String>RS5</x:String>
-                          <x:String>RS6</x:String>
-                          <x:String>RS7</x:String>
-                          <x:String>RSQ3</x:String>
-                          <x:String>RSQ8</x:String>
-                          <x:String>S1</x:String>
-                          <x:String>S2</x:String>
-                          <x:String>S3</x:String>
-                          <x:String>S4</x:String>
-                          <x:String>S5</x:String>
-                          <x:String>S6</x:String>
-                          <x:String>S7</x:String>
-                          <x:String>S8</x:String>
-                          <x:String>SQ2</x:String>
-                          <x:String>SQ5</x:String>
-                          <x:String>SQ7</x:String>
-                          <x:String>SQ8</x:String>
-                          <x:String>TT (alle)</x:String>
-                          <x:String>    TT</x:String>
-                          <x:String>    TT RS</x:String>
-                        </scg:List>
-                      </ui:SelectItem.Items>
-                      <ui:SelectItem.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e7204610-4ff8-405f-a5bd-8d8dba5e4e32" InformativeScreenshot="b76f36e208c19a52326a1c98d241c335" Selector="[String.Format(&quot;&lt;webctrl id='selectModel{0}-ds' tag='SELECT' /&gt;&quot;,index+1)]" WaitForReady="COMPLETE">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Dropdown List" sap:VirtualizedContainerService.HintSize="484,86" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="999e96d4-7230-4096-9990-b55f68a8fa28" Selector="[String.Format(&quot;&lt;webctrl id='selectModel{0}-ds' tag='SELECT' /&gt;&quot;,index+1)]">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
                         </ui:Target>
-                      </ui:SelectItem.Target>
-                    </ui:SelectItem>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into - DropDown List" sap:VirtualizedContainerService.HintSize="484,114" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="True" Text="[car.split(&quot;,&quot;c)(1).toString]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="789e6049-77d3-497d-a195-9702ae3e7793" Selector="[String.Format(&quot;&lt;webctrl id='selectModel{0}-ds' tag='SELECT' /&gt;&quot;,index+1)]">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
                     <ui:UiElementExists DisplayName="Element Exists Add other vehicles" Exists="[addOtherButton]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                       <ui:UiElementExists.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f25f5e0c-76e0-4fc7-8abb-4f1319cef54a" InformativeScreenshot="15b0426d5e82134bc7fee5981f276c75" Selector="&lt;html app='msedge.exe' title='Car search on mobile.de – find your vehicle quick and easy' /&gt;&lt;webctrl parentid='form-dsp' tag='A' /&gt;">
@@ -292,7 +262,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="type" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Sequence - CheckBox" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -342,7 +312,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="fuel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Click Fuel" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -360,7 +330,7 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d018205a-2bce-4d23-8d8c-4427d951e857" InformativeScreenshot="10caa7c8ffe0e3c4618b5009dc97b4cd" Selector="[String.Format(&quot;&lt;webctrl aaname='{0}' parentid='form-dsp' tag='SPAN' /&gt;&quot;, in_fuelTypes)]">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d018205a-2bce-4d23-8d8c-4427d951e857" InformativeScreenshot="10caa7c8ffe0e3c4618b5009dc97b4cd" Selector="[String.Format(&quot;&lt;webctrl aaname='{0}' parentid='form-dsp' tag='SPAN' /&gt;&quot;, fuel)]">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>

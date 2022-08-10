@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="UnitTest_Mobile_SetMoreFilters" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1129,1200" sap2010:WorkflowViewState.IdRef="UnitTest_Mobile_SetMoreFilters_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="UnitTest_Mobile_SetMoreFilters" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1156,1200" sap2010:WorkflowViewState.IdRef="UnitTest_Mobile_SetMoreFilters_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
@@ -58,7 +58,6 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Testing</AssemblyReference>
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
@@ -72,7 +71,6 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="browser" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
-      <Variable x:TypeArguments="x:String" Name="browserName" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -86,27 +84,17 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="375,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="DataLayer\InitAllSettings.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="375,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="BussinessLayer\InitAllSettings.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">
-            <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
-          </OutArgument>
-          <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">
-            <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;Settings&quot;, &quot;Constants&quot;}" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">
-            <Literal x:TypeArguments="x:String">Data\Config.xlsx</Literal>
-          </InArgument>
+          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
+          <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants"}]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Mobile_Open_MobileDotde workflow" sap:VirtualizedContainerService.HintSize="375,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ApplicationLayer\Mobile_Open_MobileDotde.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <OutArgument x:TypeArguments="ui:Browser" x:Key="out_browser">
-            <mva:VisualBasicReference x:TypeArguments="ui:Browser" ExpressionText="browser" />
-          </OutArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_mobileDotDeURL">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;mobileDotDeURL&quot;).ToString" />
-          </InArgument>
+          <OutArgument x:TypeArguments="ui:Browser" x:Key="out_browser">[browser]</OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_mobileDotDeURL">[Config("mobileDotDeURL").ToString]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
@@ -118,33 +106,15 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Browser_SetMoreFilters workflow" sap:VirtualizedContainerService.HintSize="347,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ApplicationLayer\Mobile_SetMoreFilters.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="ui:Browser" x:Key="in_browser">
-            <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="browser" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_carBrands">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;cars&quot;).ToString" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_carTypes">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;vehicleType&quot;).ToString" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:Int32" x:Key="in_numberOfSeats">
-            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Cint(Config(&quot;numberOfSeats&quot;))" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_fuelTypes">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;fuelType&quot;).ToString" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:Int32" x:Key="in_power">
-            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Cint(Config(&quot;power&quot;))" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:Int32" x:Key="in_cubicCapacity">
-            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Cint(Config(&quot;cubicCapacity&quot;))" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_emissionSticker">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;emissionSticker&quot;).ToString" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_transmissionType">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;transmissionType&quot;).ToString" />
-          </InArgument>
+          <InArgument x:TypeArguments="ui:Browser" x:Key="in_browser">[browser]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_carBrands">[Config("cars").ToString]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_carTypes">[Config("vehicleType").ToString]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_numberOfSeats">[Cint(Config("numberOfSeats"))]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_fuelTypes">[Config("fuelType").ToString]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_power">[Cint(Config("power"))]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_cubicCapacity">[Cint(Config("cubicCapacity"))]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_emissionSticker">[Config("emissionSticker").ToString]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_transmissionType">[Config("transmissionType").ToString]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>

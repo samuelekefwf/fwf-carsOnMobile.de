@@ -3,6 +3,7 @@
   "description": "Get cars and send email with cars from mobile.de",
   "main": "Main.xaml",
   "dependencies": {
+    "CheckProcessStatus.Activities": "[1.0.1]",
     "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.Mail.Activities": "[1.15.2]",
     "UiPath.System.Activities": "[22.4.1]",
@@ -52,6 +53,30 @@
         "testCaseId": "3084053b-eab6-4940-8712-a967ea0dfd18",
         "testCaseType": "TestCase",
         "fileName": "UnitTests\\UnitTest_Mobile_SetMoreFilters.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "861745db-6146-499e-af84-887e383802ae",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_ExtractSearchedCarData.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "4b570cd3-5640-429d-9033-4b55f9443ea3",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_FilteredExctractedCarData.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "c8405b3f-4d4e-4a77-a0c6-703ded4f954d",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Email_SendEmailToManager.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "218aea7a-e762-459e-a325-86ae89711bfc",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Mobile_Close_MobileDotde.xaml"
       }
     ],
     "modernBehavior": false

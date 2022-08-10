@@ -14,6 +14,15 @@
           "lib/net461/AutoMapper.dll": {}
         }
       },
+      "CheckProcessStatus.Activities/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/_._": {}
+        },
+        "runtime": {
+          "lib/CheckProcessStatus.dll": {}
+        }
+      },
       "ClosedXML/0.87.1": {
         "type": "package",
         "dependencies": {
@@ -2376,6 +2385,15 @@
           "lib/net461/AutoMapper.dll": {}
         }
       },
+      "CheckProcessStatus.Activities/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/_._": {}
+        },
+        "runtime": {
+          "lib/CheckProcessStatus.dll": {}
+        }
+      },
       "ClosedXML/0.87.1": {
         "type": "package",
         "dependencies": {
@@ -4727,6 +4745,17 @@
         "lib/netstandard2.0/AutoMapper.dll",
         "lib/netstandard2.0/AutoMapper.pdb",
         "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "CheckProcessStatus.Activities/1.0.1": {
+      "sha512": "Z56D45uv6Ec/iteH4Osp7QexSa3lgP3b9LuBc6kDkXacjQyIeV2iqcUZaaCWPL3rM4wpApDYGAWjGeYtKvTWkw==",
+      "type": "package",
+      "path": "checkprocessstatus.activities/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "checkprocessstatus.activities.1.0.1.nupkg.sha512",
+        "checkprocessstatus.activities.nuspec",
+        "lib/CheckProcessStatus.dll"
       ]
     },
     "ClosedXML/0.87.1": {
@@ -8797,6 +8826,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
+      "CheckProcessStatus.Activities >= 1.0.1 <= 1.0.1",
       "UiPath.Excel.Activities >= 2.12.3 <= 2.12.3",
       "UiPath.Mail.Activities >= 1.15.2 <= 1.15.2",
       "UiPath.System.Activities >= 22.4.1 <= 22.4.1",
@@ -8818,6 +8848,11 @@
     "frameworks": {
       "net461": {
         "dependencies": {
+          "CheckProcessStatus.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.1, 1.0.1]"
+          },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
